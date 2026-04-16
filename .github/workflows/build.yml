@@ -26,6 +26,17 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
 
+    - name: Debug resources
+  run: |
+    echo "=== build.gradle: sourceSets/processResources ==="
+    grep -nE "sourceSets|srcDir|processResources|duplicatesStrategy|generated" build.gradle || true
+
+    echo "=== tracked files in git ==="
+    git ls-files | grep -E 'mods\.toml|pack\.mcmeta' || true
+
+    echo "=== all matching files in workspace ==="
+    find . -type f \( -name 'mods.toml' -o -name 'pack.mcmeta' \) | sort
+
     - name: Build with Gradle
       run: ./gradlew build
 
