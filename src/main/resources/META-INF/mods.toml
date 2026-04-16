@@ -1,0 +1,10 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+
+[[mods]]
+modId="gravitytnt"
+version="1.0.0"
+name="Gravity TNT Mod"
+description='''
+Adds a custom TNT that pulls entities towards it before exploding.'''

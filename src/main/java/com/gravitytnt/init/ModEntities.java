@@ -1,0 +1,20 @@
+package com.gravitytnt.init;
+
+import com.gravitytnt.GravityTntMod;
+import com.gravitytnt.entity.GravityTntEntity;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobCategory;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
+
+public class ModEntities {
+    public static final DeferredRegister<EntityType<?>> ENTITIES = 
+            DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, GravityTntMod.MOD_ID);
+
+    public static final RegistryObject<EntityType<GravityTntEntity>> GRAVITY_TNT = ENTITIES.register("gravity_tnt", 
+            () -> EntityType.Builder.<GravityTntEntity>of(GravityTntEntity::new, MobCategory.MISC)
+                    .sized(0.98F, 0.98F)
+                    .clientTrackingOffset(10)
+                    .build("gravity_tnt"));
+}

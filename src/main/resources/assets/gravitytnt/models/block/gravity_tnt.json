@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gravitytnt:block/gravity_tnt_block"
+  }
+}
