@@ -16,7 +16,7 @@ public class ModEntities {
     public static final RegistryObject<EntityType<GravityTntEntity>> GRAVITY_TNT = ENTITIES.register("gravity_tnt",
             () -> EntityType.Builder.of(GravityTntEntity::new, MobCategory.MISC)
                     .sized(0.98F, 0.98F)
-                    .clientTrackingRange(10)   // <-- вместо clientTrackingOffset
+                    .clientTrackingRange(10)
                     .build("gravity_tnt"));
 
     public static void register(IEventBus bus) {
